@@ -1,0 +1,165 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form container for all pages (Login, Sign-up, Forgot, PG) */
+.container {
+    width: 360px;
+    background: white;
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Logo styles */
+.logo {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Label styles */
+label {
+    display: block;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: left;
+    color: #333;
+}
+
+/* Input field styles */
+input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007ac1;
+}
+
+/* Link styles */
+.link {
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    color: #0095f6;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles (Sign Up/Log In/ Forgot Password Links) */
+.footer {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #0095f6;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Ensures 'required' fields are marked */
+.required::after {
+    content: " *";
+    color: red;
+}
+
+/* Password display styles for Password Generator */
+#passwordDisplay {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background-color: #2d3a3f;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
+    align-items: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 27px;
+   
+}
+
+header nav .logo h1 {
+    font-size: 24px;
+    color: white;
+    padding-top: 0.55cm;
+    font-family: Arial, sans-serif;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+.hero-content .image {
+    width: 100%; /* Set to 100% to make it responsive */
+    height: auto; /* Keeps the aspect ratio intact */
+    max-width: 1000px; /* You can adjust the maximum width */
+    max-height: 600px; /* Adjust the maximum height */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin: 0 auto; /* Centers the image horizontally */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Screen</title>
+    <link rel="stylesheet" href="css/msg.css">
+
+</head>
+<body>
+    
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-profile">
+                <img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Profile Picture" class="header-profile-pic">
+                <span class="receiver-name">Counselor-Ruchika</span>
+            </div>
+        </div>
+
+        <div class="chat-box" id="chat-box">
+            <!-- Messages will be dynamically added here -->
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type a message..." />
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle sending messages
+        document.getElementById('send-btn').addEventListener('click', function() {
+            let messageInput = document.getElementById('message-input');
+            let message = messageInput.value.trim();
+
+            if (message !== "") {
+                // Create a new message bubble
+                let messageBubble = document.createElement('div');
+                messageBubble.classList.add('message', 'sent');
+                messageBubble.textContent = message;
+
+                // Append message to chat-box
+                document.getElementById('chat-box').appendChild(messageBubble);
+
+                // Clear input field
+                messageInput.value = '';
+
+                // Scroll to the bottom of the chat
+                document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
+            }
+        });
+
+        // Optional: Allow pressing "Enter" to send the message
+        document.getElementById('message-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('send-btn').click();
+            }
+        });
+    </script>
+</body>
+</html>

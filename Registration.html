@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathGuider - Sign Up</title>
+    <link rel="stylesheet" href="/css/Registration.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <script>
+        function validate(){
+        var letters= /^[A-Za-z]+$/;
+        var x=/^\d{10}$/;
+        var y=/^([a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$)/;
+        var name=document.forms["register"]["first-name"].value
+       
+            var email=document.forms["register"]["email"].value;
+            var phone=document.forms["register"]["phone"].value;
+        if(name.length<2){
+        alert("Name should contains atleast 2 character")
+        }
+        else if(!name.match(letters)) {
+        alert("Name should only contains letters!!")
+        }
+          else  if (!email.match(y)){
+            alert("Email should only contain valid characters")
+            }
+           else if (!phone.match(x)){
+            alert("Phono no. should contain 10 digits")
+            }
+        }
+        </script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="./admin.html">PathGuider</a></h1>
+            </div>
+            <section id="Navg">
+                <ul id="icon">
+                    <a href="msg.html"><li><i class="fa-regular fa-comment-dots" style="color: #f5f5f5; "></i></li></a>
+                <a href="Registration.html"> <li><i class="fa-regular fa-user" style="color: #efeff1;"></i></li></a>
+                </ul>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="admin.html">Log out</a></li>
+                <li><a href="#services">Blogs</a></li>
+                <li><a href="#testimonials">Podcasts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </section>
+        </nav>
+    </header>
+  
+    <div class="container">
+        <h1>Personal Details</h1>
+        <form name="register" >
+            <!-- First Name -->
+            <label for="first-name" class="required">First Name :</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <!-- Middle Name -->
+            <label for="middle-name">Middle Name :</label>
+            <input type="text" id="middle-name" name="middle-name">
+
+            <!-- Last Name -->
+            <label for="last-name" class="required">Last Name :</label>
+            <input type="text" id="last-name" name="last-name" required>
+          
+          <!-- Roll no. -->
+          <label for="phone" class="required">Roll No. :</label>
+            <input type="tel" id="phone" name="phone" required>
+          
+                         <!-- Date of Birth -->
+                <label for="dob" class="required">Date of Birth :</label>
+                <input type="date" id="dob" name="dob" required>
+
+            <!-- Gender -->
+            <label for="gender" class="required">Gender :</label>
+            <input type="radio" id="male" name="gender" value="Male" required> Male
+            <input type="radio" id="female" name="gender" value="Female"> Female
+            <input type="radio" id="other" name="gender" value="Other"> Other
+          
+          <!-- Phone Number -->
+            <label for="phone" class="required">Phone No. :</label>
+            <input type="tel" id="phone" name="phone" required>
+        
+            <!-- Email -->
+            <label for="email" class="required">Email :</label>
+            <input type="email" id="email" name="email" required>
+          
+                      <!-- Branch -->
+            <label for="branch" class="required">Branch :</label>
+            <select id="branch" name="branch" required>
+                <option value="" disabled selected>Select branch</option>
+                <option value="B-Tech">B-Tech</option>
+                <option value="Pharmacy">Pharmacy</option>
+                <option value="MBA">MBA</option>
+                <option value="BBA">BBA</option>
+                <option value="MCA">MCA</option>
+                <option value="BCA">BCA</option>
+            </select>
+          
+          <!-- Father Name -->
+            <label for="first-name" class="required">Father's Name :</label>
+            <input type="text" id="first-name" name="first-name" required>
+          
+          <!-- Mother Name -->
+           <label for="first-name" class="required">Mother's Name :</label>
+            <input type="text" id="first-name" name="first-name" required>
+          
+            <!-- Parents Phone Number -->
+            <label for="phone" class="required">Patent's Phone No. :</label>
+            <input type="tel" id="phone" name="phone" required>
+
+          <!-- father OCCUPATION -->
+           <label for="first-name" class="required">Occupation of Father :</label>
+            <input type="text" id="first-name" name="first-name" required>
+          
+          <!-- Mother occupation -->
+           <label for="first-name" class="required">Occupation of Mother :</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <!-- Languages Known -->
+            <label for="languages">Languages Known :</label>
+            <input type="checkbox" id="english" name="languages" value="English"> English
+            <input type="checkbox" id="hindi" name="languages" value="Hindi"> Hindi
+            <input type="checkbox" id="tamil" name="languages" value="Tamil"> Tamil
+            <input type="checkbox" id="telugu" name="languages" value="Telugu"> Telugu
+          
+          <!-- hostellor -->
+            <label for="gender" class="required">Stay:</label>
+            <input type="radio" id="male" name="gender" value="Male" required> Day-Scholar
+          <input type="radio" id="other" name="gender" value="Other"> Hosteller
+          
+          <!-- Bus facility -->
+            <label for="gender" class="required">Uses College Bus Facility ?:</label>
+            <input type="radio" id="male" name="gender" value="Male" required> Yes
+          <input type="radio" id="other" name="gender" value="Other"> No
+
+            <!--Address -->
+            <label for="address">Address :</label>
+            <textarea id="address" name="address" rows="5"></textarea>
+
+            <!-- Register Button -->
+            <button type="submit" onclick="validate()">Done</button>
+        </form>
+    </div>
+</body>
+</html>
